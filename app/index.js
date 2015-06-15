@@ -19,5 +19,6 @@ module.exports = generators.Base.extend({
   },
   writing: function () {
     this.fs.copyTpl(this.templatePath("README.md"), this.destinationPath("README.md"), this.props);
+    this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.props);
   }
 });
