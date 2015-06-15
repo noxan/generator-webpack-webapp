@@ -39,6 +39,7 @@ module.exports = generators.Base.extend({
     this.fs.copy(this.templatePath("_jscsrc"), this.destinationPath(".jscsrc"));
 
     this.fs.copy(this.templatePath("src/app.js"), this.destinationPath("src/app.js"));
+    this.fs.copyTpl(this.templatePath("src/index.html.jade"), this.destinationPath("src/index.html.jade"), this.context);
   },
   install: function () {
     this.installDependencies({
