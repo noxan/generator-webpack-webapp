@@ -26,7 +26,7 @@ module.exports = generators.Base.extend({
       this.context = {};
       this.context.appname = answers.appname;
       this.context.description = answers.description;
-      this.context.includeAngular = answers.features.indexOf("includeAngular") > 0;
+      this.context.includeAngular = answers.features.indexOf("includeAngular") >= 0;
 
       done();
     }.bind(this));
