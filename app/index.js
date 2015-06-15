@@ -12,13 +12,14 @@ module.exports = generators.Base.extend({
     }];
 
     this.prompt(prompts, function (answers) {
-      this.props = answers;
-      this.log(answers);
+      this.context = {};
+      this.context.appname = answers.appname;
+
       done();
     }.bind(this));
   },
   writing: function () {
-    this.fs.copyTpl(this.templatePath("README.md"), this.destinationPath("README.md"), this.props);
-    this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.props);
+    this.fs.copyTpl(this.templatePath("README.md"), this.destinationPath("README.md"), this.context);
+    this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.context);
   }
 });
