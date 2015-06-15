@@ -1,0 +1,11 @@
+{
+  "name": "generator-webpack-webapp",
+  "version": "0.1.0",
+  "description": "Yo generator for web apps build with webpack, web them all!",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Stromer <richard@devisio.net>",
+  "license": "MIT"
+}
