@@ -9,11 +9,19 @@ module.exports = generators.Base.extend({
       name: "appname",
       message: "What's the name of your project?",
       default: this.appname
+    }, {
+      type: "checkbox",
+      name: "features",
+      message: "What more to add?",
+      choices: [
+        {name: "AngularJS", value: "includeAngular", checked: true}
+      ]
     }];
 
     this.prompt(prompts, function (answers) {
       this.context = {};
       this.context.appname = answers.appname;
+      this.context.includeAngular = answers.features.indexOf("includeAngular") > 0;
 
       done();
     }.bind(this));
