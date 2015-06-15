@@ -36,6 +36,8 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.context);
 
     this.fs.copy(this.templatePath("webpack.config.js"), this.destinationPath("webpack.config.js"));
+    this.fs.copy(this.templatePath("_jscsrc"), this.destinationPath(".jscsrc"));
+
     this.fs.copy(this.templatePath("src/app.js"), this.destinationPath("src/app.js"));
   },
   install: function () {
