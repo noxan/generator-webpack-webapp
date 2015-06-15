@@ -7,7 +7,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/webpack/bin/webpack.js"
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
   },
   "dependencies": {<% if (includeAngular) { %>
     "angular": "^1.3.16"<% } %>
