@@ -17,5 +17,8 @@
     "url": "git@github.com:noxan/generator-webpack-webapp.git"
   },
   "author": "Richard Stromer <richard@devisio.net>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "yeoman-generator": "^0.20.1"
+  }
 }
