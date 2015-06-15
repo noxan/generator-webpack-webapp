@@ -29,5 +29,11 @@ module.exports = generators.Base.extend({
   writing: function () {
     this.fs.copyTpl(this.templatePath("README.md"), this.destinationPath("README.md"), this.context);
     this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.context);
+  },
+  install: function () {
+    this.installDependencies({
+      npm: true,
+      bower: false
+    });
   }
 });
