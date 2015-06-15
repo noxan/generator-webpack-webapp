@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-webapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yo generator for web apps build with webpack, web them all!",
   "keywords": [
     "yeoman-generator",
