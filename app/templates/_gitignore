@@ -1,0 +1,6 @@
+# vim files
+*.swp
+*.swo
+
+# npm folder
+/node_modules/
