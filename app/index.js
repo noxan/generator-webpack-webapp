@@ -10,6 +10,10 @@ module.exports = generators.Base.extend({
       message: "What's the name of your project?",
       default: this.appname
     }, {
+      message: "Describe your project",
+      name: "description",
+      default: "Awesome webapp build with webpack."
+    }, {
       type: "checkbox",
       name: "features",
       message: "What more to add?",
@@ -21,6 +25,7 @@ module.exports = generators.Base.extend({
     this.prompt(prompts, function (answers) {
       this.context = {};
       this.context.appname = answers.appname;
+      this.context.description = answers.description;
       this.context.includeAngular = answers.features.indexOf("includeAngular") > 0;
 
       done();
