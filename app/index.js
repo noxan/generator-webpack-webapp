@@ -34,6 +34,9 @@ module.exports = generators.Base.extend({
   writing: function () {
     this.fs.copyTpl(this.templatePath("README.md"), this.destinationPath("README.md"), this.context);
     this.fs.copyTpl(this.templatePath("package.json"), this.destinationPath("package.json"), this.context);
+
+    this.fs.copy(this.templatePath("webpack.config.js"), this.destinationPath("webpack.config.js"));
+    this.fs.copy(this.templatePath("src/app.js"), this.destinationPath("src/app.js"));
   },
   install: function () {
     this.installDependencies({
